@@ -4,11 +4,10 @@ int main (int ac , char **av)
 {
 	int i = 0;
 	int j;
-	char *str = argv[1];
+	char *str = av[1];
 
 	if (ac >= 2)
 	{
-		
 			while (str[1][i] && (str[1][i] == ' ' || str[1][i] == '\t')) // search for is_space and move the position.
 			{
 				i++;
