@@ -1,42 +1,42 @@
 #include <unistd.h>
 
-int main (int ac , char **av)
+int main (int argc , char **argv)
 {
 	int i = 0;
 	int j;
-	char *str = av[1];
+	char *str = argv[1];
 
-	if (ac >= 2)
+	if (argc >= 2)
 	{
-			while (str[1][i] && (str[1][i] == ' ' || str[1][i] == '\t')) // search for is_space and move the position.
+			while (str[i] && (str[i] == ' ' || str[i] == '\t'))
 			{
 				i++;
 			}
-			j = i; // this is the postion of starting of the word.
-			while (str[1][i])
+			j = i; 
+			while (str[i])
 			{
-				while (str[1][i] && (str[1][i] != ' ' && str[1][i] != '\t')) // find the next word.
+				while (str[i] && (str[i] != ' ' && str[i] != '\t'))
 				{
 					i++;
 				}
-				while (str[1][i] && (str[1][i] == ' ' || str[1][i] == '\t')) // find the next word.
+				while (str[i] && (str[i] == ' ' || str[i] == '\t'))
 				{
 					i++;
 				}
-				while (str[1][i] && (str[1][i] != ' ' && str[1][i] != '\t') && (str[1][i -1] == ' ' || str[1][i - 1] == '\t')) // print the word till it reaches last.
+				while (str[i] && (str[i] != ' ' && str[i] != '\t') && (str[i -1] == ' ' || str[i - 1] == '\t'))
 				{
-					while (str[1][i] && (str[1][i] != ' ' && str[1][i] != '\t'))
+					while (str[i] && (str[i] != ' ' && str[i] != '\t'))
 					{
-						write (1, &str[1][i], 1);
+						write (1, &str[i], 1);
 						i++;
 					}
 					write (1, " ", 1);
 					i++;
 				}
 			}
-			while (str[1][j] && (str[1][j] != ' ' && str[1][j] != '\t')) // print the first word now.
+			while (str[j] && (str[j] != ' ' && str[j] != '\t'))
 			{
-				write (1, &str[1][j], 1);
+				write (1, &str[j], 1);
 				j++;
 			}
 	}

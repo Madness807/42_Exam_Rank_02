@@ -15,5 +15,19 @@ LINKED LIST
 - ft_list_remove_if
 - sort_list
 
-OTHER
+PATH FINDING
+- Flood_fill
+
+
+
+TOUTES LES FONCTIONS OU PROGRAMMES COMMENTEE
+- ft_itoa
+- ft_split 
+- rev_wstr
+- rostring
+- sort_int_tab
+- fprime
+- ft_list_foreach
+- ft_list_remove_if
+- sort_list
 - Flood_fill

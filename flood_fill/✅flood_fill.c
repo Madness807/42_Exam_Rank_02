@@ -1,4 +1,8 @@
-#include "flood_fill.h"
+typedef struct s_point
+{
+    int x;
+    int y;
+}t_point;
 
 void f_fill(char **tab, t_point size, char target, int row, int col)
 {

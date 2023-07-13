@@ -10,7 +10,7 @@ int		absolute_value(int nbr)
 
 int		get_len(int nbr)
 {
-	int	len;
+	int	len = 0;
 	if (nbr <= 0)
 		len++;
 	while (nbr != 0)
@@ -24,7 +24,7 @@ int		get_len(int nbr)
 char	*ft_itoa(int nbr)
 {
 	char *res;
-	int len;
+	int len = 0;
 
 	len = get_len(nbr);
 	res = malloc((len +1) * sizeof (char));
